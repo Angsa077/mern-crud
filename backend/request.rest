@@ -1,0 +1,36 @@
+// Create a user 
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Elsa Fadilah",
+    "email": "elsafadilah0112@gmail.com",
+    "password": "admin123",
+    "confPassword": "admin123",
+    "role": "user"
+}
+
+###
+// get Users
+GET http://localhost:5000/users
+
+###
+// get Single User
+GET http://localhost:5000/users/a6c90a5b-dbc6-40e1-826c-22d8f144d8b0
+
+###
+// update User
+PATCH http://localhost:5000/users/a6c90a5b-dbc6-40e1-826c-22d8f144d8b0
+Content-Type: application/json
+
+{
+    "name": "Elsa Fadilah Updated",
+    "email": "elsafadilah0112@gmail.com",
+    "password": "",
+    "confPassword": "",
+    "role": "user"
+}
+
+###
+// delete User
+DELETE http://localhost:5000/users/a6c90a5b-dbc6-40e1-826c-22d8f144d8b0
