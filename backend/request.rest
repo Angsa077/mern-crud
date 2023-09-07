@@ -16,15 +16,15 @@ GET http://localhost:5000/users
 
 ###
 // get Single User
-GET http://localhost:5000/users/a6c90a5b-dbc6-40e1-826c-22d8f144d8b0
+GET http://localhost:5000/users/b6290a31-9bf3-4547-872c-7e05fedb25b8
 
 ###
 // update User
-PATCH http://localhost:5000/users/a6c90a5b-dbc6-40e1-826c-22d8f144d8b0
+PATCH http://localhost:5000/users/b6290a31-9bf3-4547-872c-7e05fedb25b8
 Content-Type: application/json
 
 {
-    "name": "Elsa Fadilah Updated",
+    "name": "Elsa Fadilah",
     "email": "elsafadilah0112@gmail.com",
     "password": "",
     "confPassword": "",
@@ -34,3 +34,63 @@ Content-Type: application/json
 ###
 // delete User
 DELETE http://localhost:5000/users/a6c90a5b-dbc6-40e1-826c-22d8f144d8b0
+
+###
+// login as User
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "elsafadilah0112@gmail.com",
+    "password": "admin123"
+}
+
+###
+// login as Admin
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "angsa0077@gmail.com",
+    "password": "admin123"
+}
+
+###
+// Me User
+GET http://localhost:5000/me
+
+###
+// Logout
+DELETE  http://localhost:5000/logout
+
+###
+// get Products
+GET http://localhost:5000/products
+
+###
+// get Single Product
+GET http://localhost:5000/products/562a1ac8-fbbd-4b73-906a-d73b212c7e19
+
+###
+// Create a product 
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name": "Product 6",
+    "price": 990
+}
+
+###
+// Update a product 
+PATCH http://localhost:5000/products/45f918c5-1e50-4698-99d9-9d6cae63edf7
+Content-Type: application/json
+
+{
+    "name": "Product 3",
+    "price": 995
+}
+
+###
+// Delete a product 
+DELETE http://localhost:5000/products/2b33cec2-2d26-4b8a-b3b9-a44fccce3380
